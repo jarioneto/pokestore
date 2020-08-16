@@ -1,0 +1,68 @@
+{
+  "name": "pokestore",
+  "version": "0.1.0",
+  "license": "UNLICENSED",
+  "private": true,
+  "author": "Jario Neto <jarioneto@gmail.com>",
+  "repository": "github:jarioneto/pokestore",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jest-environment-jsdom-sixteen",
+    "coverage": "react-scripts test --coverage --env=jest-environment-jsdom-sixteen",
+    "lint": "eslint src/**/*.{ts,tsx}"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "react-toastify": "^6.0.8",
+    "styled-components": "^5.1.1",
+    "typescript": "~3.9.7"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.2",
+    "@testing-library/react": "^10.4.7",
+    "@testing-library/user-event": "^12.1.0",
+    "@types/jest": "^26.0.8",
+    "@types/node": "^14.0.27",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "@types/testing-library__jest-dom": "^5.9.2",
+    "@types/react-router-dom": "^5.1.5",
+    "@types/styled-components": "^5.1.2",
+    "@typescript-eslint/eslint-plugin": "^3.7.1",
+    "@typescript-eslint/parser": "^3.7.1",
+    "axios-mock-adapter": "^1.18.2",
+    "eslint-config-airbnb-typescript": "^9.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-jest": "^23.20.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "jest-environment-jsdom-sixteen": "^1.0.3",
+    "prettier": "^2.0.5"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!src/**/*.d.ts",
+      "!src/assets/**",
+      "!src/types/**",
+      "!src/routes/**",
+      "!src/index.tsx"
+    ]
+  }
+}
