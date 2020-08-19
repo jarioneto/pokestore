@@ -65,23 +65,23 @@ const useCart = (): IUseCart => {
   };
 
   const removeItem = (productId: number) => {
-    const newItems = items.filter((item) => item.product.id !== productId);
+    const updateItems = items.filter((item) => item.product.id !== productId);
 
     const newCart: ICart = {
-      items: newItems,
-      amount: getAmount(newItems)
+      items: updateItems,
+      amount: getAmount(updateItems)
     };
 
     setCart(newCart);
   };
 
   const removeAll = () => {
-    const newCart: ICart = {
+    const emptyCart: ICart = {
       items: [],
       amount: 0
     };
 
-    setCart(newCart);
+    setCart(emptyCart);
   };
 
   return { items, amount, addItem, removeItem, removeAll };

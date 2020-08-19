@@ -4,7 +4,7 @@ import React, { ButtonHTMLAttributes } from 'react';
 import { ButtonBase } from './styles';
 
 interface IProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  icon?: React.ElementType | string;
+  icon?: React.ReactNode | string;
 }
 
 const Button: React.FC<IProps> = ({ icon, children, ...restProps }) => {

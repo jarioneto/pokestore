@@ -15,9 +15,15 @@ import parsePrice from 'core/utils/parsePrice';
 // Styles
 import { Container, Content, Footer, Header } from './styles';
 
-const Cart: React.FC = () => {
+interface IProps {
+  variant?: 'rounded' | 'square';
+}
+
+const Cart: React.FC<IProps> = ({ variant = 'rounded' }) => {
   const { items, amount, removeItem, removeAll } = useCart();
   const [showModal, setShowModal] = useState(false);
+
+  const hasItems = !!items.length;
 
   const handleFinish = () => {
     window.scrollTo(0, 0);
@@ -37,7 +43,7 @@ const Cart: React.FC = () => {
   };
 
   return (
-    <Container>
+    <Container variant={variant} data-testid="cart">
       <Header>
         <h5>Carrinho</h5>
       </Header>
@@ -45,7 +51,9 @@ const Cart: React.FC = () => {
       <Footer>
         <h6>Total</h6>
         <span>{parsePrice(amount)}</span>
-        <Button onClick={handleFinish}>Finalizar</Button>
+        <Button disabled={!hasItems} onClick={handleFinish}>
+          Finalizar
+        </Button>
       </Footer>
       {showModal && <Modal onClose={handleClose} />}
     </Container>

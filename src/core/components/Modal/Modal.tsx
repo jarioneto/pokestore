@@ -23,8 +23,8 @@ const Modal: React.FC<IProps> = ({ onClose }) => {
   }, []);
 
   return (
-    <Container id="modal">
-      <Content>
+    <Container>
+      <Content role="alert">
         <Eggs />
         <h6>Compra finalizada!</h6>
         <p>Seus Pokémon estão a caminho, prepare-se para desfrutar de grandes batalhas!</p>

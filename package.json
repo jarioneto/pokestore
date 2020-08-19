@@ -58,6 +58,10 @@
     ]
   },
   "jest": {
+    "moduleNameMapper": {
+      "setupTests": "<rootDir>/src/setupTests",
+      "^__mocks__(.*)$": "<rootDir>/__mocks__$1"
+    },
     "collectCoverageFrom": [
       "src/**/*.{ts,tsx}",
       "!src/**/*.d.ts",

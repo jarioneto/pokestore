@@ -7,6 +7,7 @@ import { ICatalog } from 'core/types/catalog';
 import Header from 'core/components/Header';
 import Catalog from 'core/components/Catalog';
 import Cart from 'core/components/Cart';
+import Loader from 'core/components/Loader';
 
 // Context
 import StoreContext from 'core/contexts/StoreContext';
@@ -16,6 +17,7 @@ import { fetchProducts } from 'core/services/api';
 
 // Utils
 import parseProduct from 'core/utils/parseProduct';
+import toast from 'core/utils/toast';
 
 // Styles
 import { Container, Content } from './styles';
@@ -31,32 +33,38 @@ const Home: React.FC = () => {
   useEffect(() => {
     setLoading(true);
 
-    fetchProducts('fire').then(({ data }) => {
-      const products = data.pokemon;
+    fetchProducts('fire')
+      .then(({ data }) => {
+        const products = data.pokemon;
+        const parsedProducts = products.map((product: any) => parseProduct(product));
 
-      const parsedProducts = products.map((product: any) => parseProduct(product));
+        const catalog: ICatalog = {
+          items: parsedProducts,
+          currentItems: [],
+          filter: '',
+          page: 1,
+          hasNextPage: true
+        };
 
-      const catalog: ICatalog = {
-        items: parsedProducts,
-        currentItems: [],
-        filter: '',
-        page: 1,
-        hasNextPage: true
-      };
-
-      setCatalog(catalog);
-      setLoading(false);
-    });
+        setCatalog(catalog);
+        setLoading(false);
+      })
+      .catch(() => {
+        setLoading(false);
+        toast('Error, try again');
+      });
   }, [setCatalog]);
 
   return (
     <Container>
       <Header storeLogo={logo} storeName="PokéStore" searchPlaceholder="o que você procura" />
-      {!loading && (
+      {!loading ? (
         <Content>
           <Catalog />
           <Cart />
         </Content>
+      ) : (
+        <Loader />
       )}
     </Container>
   );

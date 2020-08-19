@@ -17,7 +17,7 @@ const Home = React.lazy(() => import('../pages/Home'));
 const Routes: React.FC<RouteComponentProps> = () => {
   return (
     <Suspense fallback={<Loader />}>
-      <Router basename="fire">
+      <Router basename="/fire">
         <Switch>
           <Route path="/" exact component={Home} />
           <Redirect from="*" to="/" />

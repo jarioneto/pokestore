@@ -24,7 +24,7 @@ const CartItem: React.FC<IProps> = ({ item, onDelete }) => {
   const { product, quantity } = item;
 
   return (
-    <Container>
+    <Container data-testid="cart-item">
       <Photo src={product.image} alt={product.name} />
       <Quantity>x {quantity}</Quantity>
       <Description>

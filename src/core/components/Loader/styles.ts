@@ -4,18 +4,19 @@ import styled from 'styled-components';
 import themeDefault from 'core/styles/theme/main';
 
 export const Container = styled.div`
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  width: 80px;
-  height: 80px;
+  width: 100%;
 
   > div {
     box-sizing: border-box;
     display: block;
     position: absolute;
-    width: 64px;
-    height: 64px;
-    border: 7px solid
+    width: 45px;
+    height: 45px;
+    border: 4px solid
       ${({ theme }) => theme?.colors?.primary.main ?? themeDefault.colors.primary.main};
     border-radius: 50%;
     animation: loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;

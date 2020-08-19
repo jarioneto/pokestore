@@ -5,7 +5,7 @@ import { Container } from './styles';
 
 const Loader: React.FC = () => {
   return (
-    <Container>
+    <Container data-testid="loader">
       <div />
       <div />
       <div />

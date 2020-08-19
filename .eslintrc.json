@@ -40,6 +40,8 @@
     "react/jsx-props-no-spreading": "off",
     "import/order": "off",
     "import/no-extraneous-dependencies": "off",
-    "@typescript-eslint/no-use-before-define": "off"
+    "jest/no-mocks-import": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/no-explicit-any": "off"
   }
 }

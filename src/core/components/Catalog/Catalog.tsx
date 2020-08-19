@@ -17,7 +17,7 @@ const Catalog: React.FC = () => {
   const { products, getProducts, hasNextPage } = useCatalog();
 
   return (
-    <Container>
+    <Container data-testid="catalog">
       <InfiniteScroll
         hasMore={hasNextPage}
         loadMore={getProducts}
