@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="144.917" height="86.225" viewBox="0 0 144.917 86.225">
+  <defs>
+    <linearGradient id="linear-gradient" x1="4.712" y1="-0.504" x2="-2.658" y2="1.255" gradientUnits="objectBoundingBox">
+      <stop offset="0"/>
+      <stop offset="1" stop-color="#b3b3b3"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="4.712" y1="1.504" x2="-2.658" y2="-0.255" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="-0.365" y1="-2.04" x2="1.065" y2="1.952" gradientUnits="objectBoundingBox">
+      <stop offset="0.155" stop-color="#fff"/>
+      <stop offset="1" stop-color="#ccc"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#7b7b7b"/>
+      <stop offset="1" stop-color="#a5a4a4"/>
+    </linearGradient>
+  </defs>
+  <g id="Grupo_65" data-name="Grupo 65" transform="translate(-1394.083 -546.751)">
+    <g id="Grupo_61" data-name="Grupo 61" transform="translate(1211.474 59.446)">
+      <path id="Retângulo_30" data-name="Retângulo 30" d="M0,0H6.263a0,0,0,0,1,0,0V54.121a.9.9,0,0,1-.9.9H.9a.9.9,0,0,1-.9-.9V0A0,0,0,0,1,0,0Z" transform="translate(264.219 538.914) rotate(-152.251)" fill="url(#linear-gradient)"/>
+      <path id="Retângulo_15" data-name="Retângulo 15" d="M.9,0H5.363a.9.9,0,0,1,.9.9V55.02a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V.9A.9.9,0,0,1,.9,0Z" transform="translate(202.676 490.222) rotate(-27.749)" fill="url(#linear-gradient-2)"/>
+      <path id="Caminho_19" data-name="Caminho 19" d="M263.255,486.733h-91.99a5.072,5.072,0,0,1-4.934-3.893L155.177,436.2a5.075,5.075,0,0,1,4.936-6.253h114.3a5.073,5.073,0,0,1,4.934,6.253L268.189,482.84A5.072,5.072,0,0,1,263.255,486.733Z" transform="translate(27.574 86.797)" fill="url(#linear-gradient-3)"/>
+      <path id="Caminho_29" data-name="Caminho 29" d="M172.036,448.52h-8.92l-3.453-12.39h12.373Z" transform="translate(30.507 90.716)" fill="#fff"/>
+      <rect id="Retângulo_18" data-name="Retângulo 18" width="8.442" height="12.39" transform="translate(206.509 526.846)" fill="#fff"/>
+      <rect id="Retângulo_19" data-name="Retângulo 19" width="8.442" height="12.39" transform="translate(219.58 526.846)" fill="#fff"/>
+      <rect id="Retângulo_20" data-name="Retângulo 20" width="8.442" height="12.39" transform="translate(232.65 526.846)" fill="#fff"/>
+      <rect id="Retângulo_21" data-name="Retângulo 21" width="8.442" height="12.39" transform="translate(245.721 526.846)" fill="#fff"/>
+      <rect id="Retângulo_22" data-name="Retângulo 22" width="8.442" height="12.39" transform="translate(258.792 526.846)" fill="#fff"/>
+      <rect id="Retângulo_23" data-name="Retângulo 23" width="8.442" height="12.39" transform="translate(271.863 526.846)" fill="#fff"/>
+      <path id="Caminho_30" data-name="Caminho 30" d="M225.75,448.52h-8.441V436.13h11.709Z" transform="translate(67.046 90.716)" fill="#fff"/>
+      <path id="Caminho_31" data-name="Caminho 31" d="M170.511,458.6h-5.174l-3.268-12.39h8.442Z" transform="translate(32.033 97.107)" fill="#fff"/>
+      <rect id="Retângulo_24" data-name="Retângulo 24" width="8.442" height="12.39" transform="translate(206.509 543.32)" fill="#fff"/>
+      <rect id="Retângulo_25" data-name="Retângulo 25" width="8.442" height="12.39" transform="translate(219.58 543.32)" fill="#fff"/>
+      <rect id="Retângulo_26" data-name="Retângulo 26" width="8.442" height="12.39" transform="translate(232.65 543.32)" fill="#fff"/>
+      <rect id="Retângulo_27" data-name="Retângulo 27" width="8.442" height="12.39" transform="translate(245.721 543.32)" fill="#fff"/>
+      <rect id="Retângulo_28" data-name="Retângulo 28" width="8.442" height="12.39" transform="translate(258.792 543.32)" fill="#fff"/>
+      <rect id="Retângulo_29" data-name="Retângulo 29" width="8.442" height="12.39" transform="translate(271.863 543.32)" fill="#fff"/>
+      <path id="Caminho_32" data-name="Caminho 32" d="M222.483,458.6h-5.174v-12.39h8.441Z" transform="translate(67.046 97.107)" fill="#fff"/>
+    </g>
+    <circle id="Elipse_6" data-name="Elipse 6" cx="20" cy="20" r="20" transform="translate(1499 554)" fill="url(#linear-gradient-4)"/>
+    <text id="_0" data-name="0" transform="translate(1519 582)" fill="#fff" font-size="20" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="-6.46" y="0">0</tspan></text>
+  </g>
+</svg>

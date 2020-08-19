@@ -15,6 +15,11 @@ declare module 'styled-components' {
         dark: string;
         contrast: string;
       };
+      typograph: {
+        main: string;
+        light: string;
+        dark: string;
+      };
     };
   }
 }

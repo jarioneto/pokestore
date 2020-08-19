@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { FC, Suspense } from 'react';
 
-function App() {
+// Third party
+import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
+
+// Components
+import Loader from 'core/components/Loader';
+
+const StoreFire = React.lazy(() => import('./stores/fire'));
+
+const App: FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Suspense fallback={<Loader />}>
+      <Router>
+        <Switch>
+          <Route path="/" exact component={StoreFire} />
+          <Route path="/fire" component={StoreFire} />
+          <Redirect from="*" to="/" />
+        </Switch>
+      </Router>
+    </Suspense>
   );
-}
+};
 
 export default App;
