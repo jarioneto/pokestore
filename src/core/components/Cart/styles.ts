@@ -1,9 +1,12 @@
 import styled from 'styled-components';
 
+// Types
+import { IVariant } from 'core/types/variant';
+
 // Styles
 import themeDefault from 'core/styles/theme/main';
 
-export const Container = styled.div<{ variant: string }>`
+export const Container = styled.div<IVariant>`
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -13,7 +16,7 @@ export const Container = styled.div<{ variant: string }>`
   height: calc(100vh - 150px);
   max-height: 600px;
   padding: 10px 15px 15px 15px;
-  border-radius: ${({ variant }) => (variant === 'rounded' ? '10px' : 'unset')};
+  border-radius: ${({ variant }) => (variant !== 'retro' ? '10px' : 'unset')};
   background: #fff;
 `;
 

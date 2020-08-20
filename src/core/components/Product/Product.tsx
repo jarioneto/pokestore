@@ -18,28 +18,33 @@ import { ReactComponent as FavoriteIcon } from 'core/assets/images/favorite.svg'
 
 // Types
 import { IProduct } from 'core/types/product';
+import { IVariant } from 'core/types/variant';
 
-interface IProps {
+interface IProps extends IVariant {
   product: IProduct;
 }
 
-const Product: React.FC<IProps> = ({ product }) => {
+const Product: React.FC<IProps> = ({ product, variant }) => {
   const { image, name, price, discount } = product;
 
   const { addItem } = useCart();
 
   const [favorite, setFavorite] = useState(false);
 
+  const isCleanVariant = variant === 'clean';
+
   const toggleFavrite = () => {
     setFavorite(!favorite);
   };
 
   return (
-    <Container>
-      <Header>
-        <FavoriteIcon role="button" data-favorite={favorite} onClick={toggleFavrite} />
-        {!!discount && <Badge>{discount}% OFF</Badge>}
-      </Header>
+    <Container variant={variant}>
+      {!isCleanVariant && (
+        <Header>
+          <FavoriteIcon role="button" data-favorite={favorite} onClick={toggleFavrite} />
+          <Badge>{discount}% OFF</Badge>
+        </Header>
+      )}
       <Photo src={image} alt={name} title={name} />
       <Description>
         <h6>{name}</h6>

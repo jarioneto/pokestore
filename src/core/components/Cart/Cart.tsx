@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 
+// Types
+import { IVariant } from 'core/types/variant';
+
 // Components
 import Button from '../Button';
 import CartItem from '../CartItem';
@@ -15,11 +18,7 @@ import parsePrice from 'core/utils/parsePrice';
 // Styles
 import { Container, Content, Footer, Header } from './styles';
 
-interface IProps {
-  variant?: 'rounded' | 'square';
-}
-
-const Cart: React.FC<IProps> = ({ variant = 'rounded' }) => {
+const Cart: React.FC<IVariant> = ({ variant = 'default' }) => {
   const { items, amount, removeItem, removeAll } = useCart();
   const [showModal, setShowModal] = useState(false);
 

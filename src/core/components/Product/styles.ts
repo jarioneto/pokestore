@@ -1,9 +1,12 @@
 import styled from 'styled-components';
 
+// Types
+import { IVariant } from 'core/types/variant';
+
 // Styles
 import themeDefault from 'core/styles/theme/main';
 
-export const Container = styled.div`
+export const Container = styled.div<IVariant>`
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -12,7 +15,7 @@ export const Container = styled.div`
   height: 330px;
   width: 100%;
   padding: 10px 15px 15px 15px;
-  border-radius: 10px;
+  border-radius: ${({ variant }) => (variant !== 'retro' ? '10px' : 'unset')};
   background: #fff;
   transition: transform 0.7s;
   backface-visibility: hidden;
@@ -35,6 +38,16 @@ export const Container = styled.div`
       color: ${({ theme }) =>
         theme?.colors?.primary.contrast ?? themeDefault.colors.primary.contrast};
     }
+  }
+
+  > div:nth-child(2) {
+    order: ${({ variant }) => (variant === 'clean' ? '-1' : 'unset')};
+  }
+
+  > img {
+    flex: ${({ variant }) => (variant === 'clean' ? '-0' : '0.35')};
+    height: ${({ variant }) => (variant === 'clean' ? '140px' : '110px')};
+    margin-top: ${({ variant }) => (variant === 'clean' ? '-40px' : 'unset')};
   }
 `;
 
