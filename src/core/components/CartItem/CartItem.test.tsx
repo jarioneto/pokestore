@@ -30,7 +30,7 @@ describe('CartItem component', () => {
     expect(screen.getByRole('img', { name: /vulpix/i })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: /vulpix/i })).toBeInTheDocument();
 
-    expect(screen.getByText('R$ 37.00')).toBeInTheDocument();
+    expect(screen.getByText(/37.00/i)).toBeInTheDocument();
     expect(screen.getByText('x 1')).toBeInTheDocument();
 
     expect(screen.getByRole('button', { name: /trash/i })).toBeInTheDocument();
