@@ -68,8 +68,9 @@
       "src/**/*.{ts,tsx}",
       "!src/**/*.d.ts",
       "!src/assets/**",
-      "!src/types/**",
-      "!src/routes/**",
+      "!src/core/types/**",
+      "!src/**/routes/**",
+      "!src/**/styles/**",
       "!src/index.tsx"
     ]
   }
