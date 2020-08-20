@@ -72,6 +72,14 @@
       "!src/**/routes/**",
       "!src/**/styles/**",
       "!src/index.tsx"
-    ]
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 89,
+        "branches": 96,
+        "functions": 86,
+        "lines": 90
+      }
+    }
   }
 }
