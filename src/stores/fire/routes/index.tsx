@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 
 // Third party
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Redirect,
   Switch,

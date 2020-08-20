@@ -1,7 +1,7 @@
 import React, { FC, Suspense } from 'react';
 
 // Third party
-import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 
 // Components
 import Loader from 'core/components/Loader';
