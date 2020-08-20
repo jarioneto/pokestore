@@ -1,0 +1,40 @@
+name: CI
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: build
+      run: |
+        yarn
+        yarn build
+      env:
+        REACT_APP_API_URL: ${{ secrets.API_URL }}
+        REACT_APP_POKEMON_ASSETS: ${{ secrets.POKEMON_ASSETS }}
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: lint
+      run: |
+        yarn
+        yarn lint
+      env:
+        REACT_APP_API_URL: ${{ secrets.API_URL }}
+        REACT_APP_POKEMON_ASSETS: ${{ secrets.POKEMON_ASSETS }}
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: coverage
+      run: |
+        yarn
+        yarn coverage
+      env:
+        REACT_APP_API_URL: ${{ secrets.API_URL }}
+        REACT_APP_POKEMON_ASSETS: ${{ secrets.POKEMON_ASSETS }}
