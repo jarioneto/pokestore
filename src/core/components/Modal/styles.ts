@@ -17,6 +17,18 @@ export const Container = styled.div`
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 99;
+  animation: scale 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
+  @keyframes scale {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
 `;
 
 export const Content = styled.div`
